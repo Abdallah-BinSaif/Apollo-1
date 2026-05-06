@@ -85,3 +85,20 @@ class Student extends Person{
 }
 const student = new Student("Alice", 20, "A");
 
+
+// Problem - 7
+
+type NumberArray = number[]
+
+function getIntersection (arr1:NumberArray, arr2: NumberArray): NumberArray {
+    const newArray:NumberArray = []
+    arr1.map(element =>{
+        arr2.map((element2) =>{
+            if(element === element2){
+                newArray.push(element)
+            }
+        })
+    })
+    return newArray
+}
+terminal(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
