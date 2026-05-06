@@ -29,19 +29,20 @@ function checkType(param:StringOrNumber) : string{
         return "String"
     }else if(typeof param === "number"){
         return "Number"
+    }else{
+        return ""
     }
 }
-terminal(checkType("hello"))
-terminal(checkType(42))
 
-// Sample Input 1:
-checkType("Hello");
 
-// Sample Output 1:
-"String";
+// Problem - 4
+type User = {id: number, name: string, age: number}
 
-// Sample Input 2:
-checkType(42);
+function getProperty<X extends User>(obj: X, key:keyof User){
+    return obj[key]
+}
 
-// Sample Output 2:
-"Number";
+const user = { id: 1, name: "John Doe", age: 21 };
+
+
+
