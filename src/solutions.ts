@@ -1,3 +1,4 @@
+// TODO: Delete this function
 function terminal (value: any){
     console.log(value);
 }
@@ -45,4 +46,19 @@ function getProperty<X extends User>(obj: X, key:keyof User){
 const user = { id: 1, name: "John Doe", age: 21 };
 
 
+// Problem - 5
+interface Book {
+    title: string, 
+    author: string, 
+    publishedYear: number
+}
+
+function toggleReadStatus(book:Book){
+    return {...book, isRead: true}
+}
+const myBook = { 
+    title: "TypeScript Guide",
+    author: "Jane Doe", 
+    publishedYear: 2024 
+};
 
