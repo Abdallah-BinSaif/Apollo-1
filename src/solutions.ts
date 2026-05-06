@@ -13,3 +13,14 @@ const result = filterEvenNumbers([1, 2, 3, 4, 5, 6])
 
 
 // Problem - 2
+
+function reverseString(str: string): string{
+    const result = str.split("").reverse().join("")
+    return result
+}
+
+
+// Sample Input:
+
+
+terminal(reverseString("typescript"))
