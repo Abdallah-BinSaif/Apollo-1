@@ -20,7 +20,28 @@ function reverseString(str: string): string{
 }
 
 
-// Sample Input:
+// Problem - 3
 
+type StringOrNumber = string | number
 
-terminal(reverseString("typescript"))
+function checkType(param:StringOrNumber) : string{
+    if(typeof param === "string"){
+        return "String"
+    }else if(typeof param === "number"){
+        return "Number"
+    }
+}
+terminal(checkType("hello"))
+terminal(checkType(42))
+
+// Sample Input 1:
+checkType("Hello");
+
+// Sample Output 1:
+"String";
+
+// Sample Input 2:
+checkType(42);
+
+// Sample Output 2:
+"Number";
