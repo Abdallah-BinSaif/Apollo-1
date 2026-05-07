@@ -15,20 +15,21 @@
 ## Pick:
 ### The pick utility constructs a type rather than creating a new one. This utility picks certain keys and creates a new interface which is dependent on the master interface. If we need to change types we will change in the master interface. Then the change will propagate.
 
-> Don't follow DRY. And repeated code.
-![Description](p1.png) 
 
+![Description](./utility/p1.png) 
+> Don't follow DRY. And repeated code.
+
+![Description](./utility/p2.png)
 > Follow DRY concept. clean and don't repeated code
-![Description](p2.png)
 
 ## Omit
 ### This utility takes all elements from the master interface and deletes specific keys and creates a new interface that depends on the master interface. This is also the same way to change and propagate the pick utility.
 
+![Description](./utility/o1.png) 
 > Don't follow DRY. And repeated code.
-![Description](o1.png) 
 
+![Description](./utility/o2.png)
 > Follow DRY concept. clean and don't repeated code
-![Description](o2.png)
 
 <h1><b>Conclusion:</b></h1>
 The pick and omit utility prevents us from duplicating data types . it creates a new type without duplicate rather than taking from the master interface.
